@@ -68,7 +68,8 @@ function doInstallHM() {
       green "Installing home-manager..."
       installing_hm=true
       nix profile install nixpkgs#hello
-      nix run github:nix-community/home-manager/master -- init
+      # nix run github:nix-community/home-manager/master -- init
+      nix run home-manager/master -- init --switch
     fi
   else
     green "Home-manager is already installed... Continuing..."
@@ -128,7 +129,8 @@ function doInstall() {
       doInstallDirenv
     fi
     if [[ "$installing_hm" = true ]] || [[ "$installing_direnv" = true ]]; then
-      nix run github:nix-community/home-manager/master -- switch
+      # nix run github:nix-community/home-manager/master -- switch
+      nix run home-manager/master -- init --switch
       if [[ "$installing_hm" = true ]]; then
         green "Home-manager has been installed, your home-manager config file is located at $HOME/.config/home-manager/home.nix"
       fi
