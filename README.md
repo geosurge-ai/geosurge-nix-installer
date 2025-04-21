@@ -207,4 +207,6 @@ This is supposed to be a `one-click-installation`. If you want to laugh at how l
 
 `11:51 - 11:01 = 50 minutes`, meaning anyone executing this code should aim to have it readi in `30'` as I'm the less technical person in this entire company.
 
+Leave feedback on the comments!
+
 
